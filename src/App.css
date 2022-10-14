@@ -25,6 +25,7 @@ body {
   background : linear-gradient(360deg, #211F20 0%, #44403F 100%);
   color      : #FFFFFF;
   font-family: Roboto, sans-serif;
+  min-height: 100vh;
 }
 
 .container-fluid {
