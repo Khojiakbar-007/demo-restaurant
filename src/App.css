@@ -1,38 +1,246 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  padding           : 0;
+  margin            : 0;
+  -webkit-box-sizing: border-box;
+  box-sizing        : border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+img {
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+  text-decoration: none;
+  color          : unset;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+a:hover {
+  color: unset;
+}
+
+body {
+  background : -webkit-gradient(linear, left bottom, left top, from(#211F20), to(#44403F));
+  background : linear-gradient(360deg, #211F20 0%, #44403F 100%);
+  color      : #FFFFFF;
+  font-family: Roboto, sans-serif;
+}
+
+.container-fluid {
+  padding: 0 80px;
+}
+
+.button {
+  display      : inline-block;
+  padding      : 14px 20px;
+  background   : linear-gradient(114.93deg, #618967 5.11%, #72A479 94%);
+  border-radius: 10px;
+  cursor       : pointer;
+}
+
+header {
+  background: linear-gradient(360deg, #211F20 0%, #44403F 100%);
+  position  : sticky;
+  top       : 0;
+  z-index   : 100;
+}
+
+header .container {
+  display          : -webkit-box;
+  display          : -ms-flexbox;
+  display          : flex;
+  -webkit-box-pack : justify;
+  -ms-flex-pack    : justify;
+  justify-content  : space-between;
+  -webkit-box-align: center;
+  -ms-flex-align   : center;
+  align-items      : center;
+  padding          : 23px 0;
+}
+
+header .container .logo {
+  font-weight   : bold;
+  font-size     : 25px;
+  line-height   : 25px;
+  letter-spacing: 0.15em;
+}
+
+header .container .button {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+header .container .vertical-line {
+  margin   : 0 5px;
+  font-size: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+header .container .icon {
+  font-size: 20px;
+}
+
+.showcase {
+  background: url("../public/images/showcase-bg.png") no-repeat center/cover;
+}
+
+.showcase h1 {
+  width            : 50%;
+  padding          : 100px 0;
+  -webkit-transform: rotate(-8.37deg);
+  transform        : rotate(-8.37deg);
+  font-style       : italic;
+  font-size        : 50px;
+  text-align       : center;
+  text-transform   : uppercase;
+}
+
+.menu h2 {
+  margin        : 50px 0;
+  padding-left  : 20px;
+  font-style    : normal;
+  font-weight   : bold;
+  font-size     : 32px;
+  line-height   : 39px;
+  text-transform: uppercase;
+}
+
+.menu .cards-container {
+  display         : -webkit-box;
+  display         : -ms-flexbox;
+  display         : flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack   : center;
+  justify-content : center;
+}
+
+.menu .cards-container .card {
+  max-width         : 325px;
+  border-radius     : 10px;
+  overflow          : hidden;
+  margin            : 10px;
+  background        : -webkit-gradient(linear, left top, right top, from(#494544), to(#504B4A));
+  background        : linear-gradient(90deg, #494544 0%, #504B4A 100%);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition        : -webkit-transform 0.5s;
+  transition        : transform 0.75s;
+  transition        : transform 0.75s, -webkit-transform 0.75s;
+}
+
+.menu .cards-container .card:hover {
+  -webkit-box-shadow: 0px 30px 45px rgba(43, 40, 40, 0.6);
+  box-shadow        : 0px 30px 45px rgba(43, 40, 40, 0.6);
+  border-radius     : 10px;
+  -webkit-transform : scale(1.04);
+  transform         : scale(1.04);
+}
+
+.menu .cards-container .card .text-content {
+  padding: 14px 16px 18px 20px;
+}
+
+.menu .cards-container .card .text-content .button {
+  display          : -webkit-box;
+  display          : -ms-flexbox;
+  display          : flex;
+  -webkit-box-align: center;
+  -ms-flex-align   : center;
+  align-items      : center;
+}
+
+.menu .cards-container .card .info {
+  display          : -webkit-box;
+  display          : -ms-flexbox;
+  display          : flex;
+  -webkit-box-align: center;
+  -ms-flex-align   : center;
+  align-items      : center;
+  -webkit-box-pack : justify;
+  -ms-flex-pack    : justify;
+  justify-content  : space-between;
+}
+
+.menu-meal {
+  padding: 0 120px;
+}
+
+.menu-meal .container {
+  height       : 300px;
+  display      : -webkit-box;
+  display      : -ms-flexbox;
+  display      : flex;
+  background   : -webkit-gradient(linear, left top, right top, from(#494544), to(#504B4A));
+  background   : linear-gradient(90deg, #494544 0%, #504B4A 100%);
+  border-radius: 10px;
+  overflow     : hidden;
+}
+
+.menu-meal .container .img-container {
+  width     : 50%;
+  background: url("../public/images/1.png") no-repeat center/cover;
+}
+
+.menu-meal .container .info {
+  display              : -webkit-box;
+  display              : -ms-flexbox;
+  display              : flex;
+  -webkit-box-orient   : vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction   : column;
+  flex-direction       : column;
+  -webkit-box-pack     : justify;
+  -ms-flex-pack        : justify;
+  justify-content      : space-between;
+  padding              : 40px 150px 50px 50px;
+}
+
+.cart-items .container {
+  background   : -webkit-gradient(linear, left top, right top, from(#494544), to(#504B4A));
+  background   : linear-gradient(90deg, #494544 0%, #504B4A 100%);
+  border-radius: 10px;
+}
+
+.cart-items .container .cart-item {
+  height           : 126px;
+  padding          : 20px;
+  -webkit-box-align: center;
+  -ms-flex-align   : center;
+  align-items      : center;
+  display          : -webkit-box;
+  display          : -ms-flexbox;
+  display          : flex;
+  -webkit-box-pack : justify;
+  -ms-flex-pack    : justify;
+  justify-content  : space-between;
+}
+
+.cart-items .container .cart-item .img-container {
+  width: 117px;
+}
+
+.cart-items .container .cart-item:not(:first-of-type) {
+  border-top: 1px solid silver;
+}
+
+.cart-items .container .cart-item h3 {
+  cursor: pointer;
+}
+
+.cart-item .quantity {
+  font-size: 20px;
+  margin   : 0 20px;
+}
+
+.cart-item .button {
+  width        : 45px;
+  height       : 45px;
+  padding      : 0;
+  border-radius: 50%;
+  font-size    : 30px;
+  line-height  : 45px;
+  text-align   : center;
+}
+
+.cart-item .delete {
+  transform: rotate(45deg);
 }
